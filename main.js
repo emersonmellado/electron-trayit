@@ -4,7 +4,16 @@ var menubar = require('menubar');
 
 const ipcMain = require('electron').ipcMain;
 
-var mb = menubar({dir:__dirname, tooltip: "Tray IT", icon:__dirname + "/resource/icon-tray.png", width:278, height:250, resizable: false, alwaysOnTop :true});
+var mb = menubar(
+  {
+    dir:__dirname + '/src', 
+    tooltip: "Tray IT", 
+    icon:__dirname + "/resource/icon-tray.png", 
+    width:600, 
+    height:480, 
+    resizable: false, 
+    alwaysOnTop :true
+});
 
 const contextMenu = electron.Menu.buildFromTemplate([
   {
